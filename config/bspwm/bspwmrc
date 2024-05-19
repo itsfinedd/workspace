@@ -1,0 +1,28 @@
+#! /bin/sh
+
+xsetroot -cursor_name left_ptr &
+pgrep -x sxhkd > /dev/null || sxhkd &
+$HOME/.config/polybar/launch.sh
+pidof -q picom || { picom --config "$HOME"/.config/picom/picom.conf & }
+pidof -q polkit-gnome-authentication-agent-1 || { /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & }
+
+bspc monitor -d I II III IV V VI VII VIII
+bspc config border_width            2
+bspc config window_gap              10
+
+#bspc config active_border_color     "#E84F4F"
+#bspc config focused_border_color    "#E84F4F"
+#bspc config normal_border_color     "#E84F4F"
+#bspc config presel_border_color     "#E84F4F"
+
+bspc config split_ratio             0.52
+bspc config borderless_monocle      true
+bspc config gapless_monocle         true
+bspc config focus_follows_pointer   true
+
+#Static Background
+feh --no-fehbg --bg-fill ~/.wallpapers/mountain.jpg
+#Random Background
+#feh -z --no-fehbg --bg-fill ~/.wallpapers
+#Fix display for java applications
+wmname LG3D

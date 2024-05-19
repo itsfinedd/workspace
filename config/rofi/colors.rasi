@@ -1,0 +1,9 @@
+* {
+    font:                        "Jetbrains Mono Nerd Font Bold 11.5";
+    background:                  #000000;
+    background-alt:              #0E1113;
+    foreground:                  #90A4AE;
+    selected:                    #757575;
+    selected-foreground:         #FFFFFFFF;
+    text-color:                  @foreground;
+}
