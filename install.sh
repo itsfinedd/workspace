@@ -17,7 +17,7 @@ done
 sleep 5
 
 echo "Installing AUR packages"
-aurdependences=(bibata-cursor-theme zsh-sudo dracula-gtk-theme)
+aurdependences=(bibata-cursor-theme zsh-sudo zsh-theme-powerlevel10k-git dracula-gtk-theme)
 
 for aurpackage in ${aurdependences[@]}; do
 	yay -S $aurpackage --noconfirm
@@ -50,8 +50,8 @@ sudo ln -sf $HOME/.p10k.zsh /root/.p10k.zsh 2>> error.log
 echo "Installing zsh"
 if [[ $SHELL != "/usr/bin/zsh" ]]; then
 	echo "Changing shell to zsh"
-	chsh -s /usr/bin/zsh 2>> error.log
-	sudo chsh -s /usr/bin/zsh 2>> error.log
+	chsh -s /usr/bin/zsh
+	sudo chsh -s /usr/bin/zsh 2
 	echo "Shell changed to zsh"
 fi
 
