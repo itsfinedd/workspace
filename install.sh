@@ -51,7 +51,7 @@ echo "Installing zsh"
 if [[ $SHELL != "/usr/bin/zsh" ]]; then
 	echo "Changing shell to zsh"
 	chsh -s /usr/bin/zsh
-	sudo chsh -s /usr/bin/zsh 2
+	sudo chsh -s /usr/bin/zsh
 	echo "Shell changed to zsh"
 fi
 
