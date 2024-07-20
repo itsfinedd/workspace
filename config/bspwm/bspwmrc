@@ -26,3 +26,7 @@ feh --no-fehbg --bg-fill ~/.wallpapers/mountain.jpg
 #feh -z --no-fehbg --bg-fill ~/.wallpapers
 #Fix display for java applications
 wmname LG3D
+
+#Set english intl layout
+setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
+
